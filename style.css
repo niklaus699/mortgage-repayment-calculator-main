@@ -330,11 +330,11 @@ button:hover {
     .side-divs {
         width: 2.5rem;
         right: auto;
-        top: 40%;
+        top: 39%;
     }
     .side-divs1 {
         left: auto;
-        top: 40%;
+        top: 39%;
     }
     .results-container-child {
         overflow-wrap: break-word;
