@@ -340,4 +340,8 @@ button:hover {
     .result-container-child h3 {
         font-size: 15px;
     }
+    .mortgage-amount {
+        padding-left: 50px;
+        width: 72%;
+    }
 }
