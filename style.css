@@ -277,6 +277,7 @@ button:hover {
 }
 
 @media screen and (max-width: 380px) {
+    html,
     body {
         margin: 0;
         padding: 0;
