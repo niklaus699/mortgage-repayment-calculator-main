@@ -278,6 +278,7 @@ button:hover {
 
 @media screen and (max-width: 380px) {
     body {
+        height: fit-content;
         overflow-x: hidden;
         box-sizing: border-box;
         background-color: #f9fbee;
@@ -326,11 +327,11 @@ button:hover {
     .side-divs {
         width: 2.5rem;
         right: auto;
-        top: 39%;
+        top: 40%;
     }
     .side-divs1 {
         left: auto;
-        top: 39%;
+        top: 40%;
     }
     .results-container-child {
         overflow-wrap: break-word;
