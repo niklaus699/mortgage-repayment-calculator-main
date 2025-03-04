@@ -278,7 +278,9 @@ button:hover {
 
 @media screen and (max-width: 380px) {
     body {
-        max-height: 1300px;
+        margin: 0;
+        padding: 0;
+        height: auto;
         overflow-x: hidden;
         box-sizing: border-box;
         background-color: #f9fbee;
