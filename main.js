@@ -20,11 +20,45 @@ empty.className = "";
 
 let appendedElements = [];
 
+const amountMain = document.getElementById("amount");
+const termMain = document.getElementById("term");
+const rateMain = document.getElementById("rate");
+const amountDiv = document.getElementById("amount-div");
+const termDiv = document.getElementById("term-div");
+const rateDiv = document.getElementById("rate-div");
+const errorText = document.getElementById("errorText");
+const errorText1 = document.getElementById("errorText1");
+const errorText2 = document.getElementById("errorText2");
+const errorText3 = document.getElementById("errorText3");
+
+amountMain.addEventListener("input", function(e) {
+    if (amountMain.value > 0) {
+        amountDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+        errorText.style.visibility = "hidden";
+        amountMain.style.border = "1px solid #ccc";
+    }
+})
+
+termMain.addEventListener("input", function(e) {
+    if (termMain.value > 0) {
+        termDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+        errorText1.style.visibility = "hidden";
+        termMain.style.border = "1px solid #ccc";
+    }
+})
+
+rateMain.addEventListener("input", function(e) {
+    if (rateMain.value > 0) {
+        rateDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+        errorText2.style.visibility = "hidden";
+        rateMain.style.border = "1px solid #ccc";
+    }
+})
+
+
+
 form.addEventListener("submit", function(e) {
     e.preventDefault();
-    const amountMain = document.getElementById("amount");
-    const termMain = document.getElementById("term");
-    const rateMain = document.getElementById("rate");
     const amount = parseFloat(document.getElementById("amount").value);
     const term = parseFloat(document.getElementById("term").value) * 12;
     const rate = parseFloat(document.getElementById("rate").value) / 100 / 12;
@@ -32,13 +66,6 @@ form.addEventListener("submit", function(e) {
     const interest = document.getElementById('interest');
     const checked = document.querySelector("input[name='type']:checked");
     const result = document.getElementById("result");
-    const amountDiv = document.getElementById("amount-div");
-    const termDiv = document.getElementById("term-div");
-    const rateDiv = document.getElementById("rate-div");
-    const errorText = document.getElementById("errorText");
-    const errorText1 = document.getElementById("errorText1");
-    const errorText2 = document.getElementById("errorText2");
-    const errorText3 = document.getElementById("errorText3");
 
     const checkValidity = () => {
         let isValid = true;
@@ -81,6 +108,7 @@ form.addEventListener("submit", function(e) {
         }
     }
     console.log(checkValidity());
+    console.log(typeof(amountMain.value));
 
     if (checkValidity() === true) {
         let monthlyPayment, totalPayment;
@@ -108,6 +136,12 @@ form.addEventListener("submit", function(e) {
 clearAll.addEventListener('click', function(e) {
     e.preventDefault();
     form.reset();
+    amountDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+    termDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+    rateDiv.style.backgroundColor = 'hsl(202, 86%, 94%)';
+    amountMain.style.border = "1px solid #ccc";
+    termMain.style.border = "1px solid #ccc";
+    rateMain.style.border = "1px solid #ccc";
     empty.classList.remove('empty');
     appendedElements.forEach(element => result.removeChild(element));
     appendedElements = [];
@@ -129,3 +163,12 @@ const formatNumber = (num) => {
 
     return fractionalPart ? `${integerPart}.${fractionalPart}` : integerPart;
 }
+
+
+termMain.addEventListener('input', function(e) {
+
+})
+
+rateMain.addEventListener('input', function(e) {
+
+})
