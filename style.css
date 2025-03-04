@@ -34,7 +34,6 @@ h1 {
     width: 80%;
     position: relative;
     /* Optionally add an overall drop shadow */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background-color: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -281,11 +280,11 @@ button:hover {
     body {
         overflow-x: hidden;
         box-sizing: border-box;
-        background-color: white;
+        background-color: #f9fbee;
         max-width: 260px;
     }
     .container {
-        overflow-y: hidden;
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
         border-bottom-right-radius: 0;
